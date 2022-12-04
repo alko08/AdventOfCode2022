@@ -7,9 +7,7 @@ with open('data.txt') as f:  # Take in data.txt as an input file
 
     line = f.readline()
     while line:  # Read each line separately, until no more lines to read.
-        # print(line.strip())  # Check input is working
-
-        # Do math on input
+        # --- Do math on input ---
         if line.strip() == "":
             if current > answer:
                 answer3 = answer2
@@ -27,8 +25,9 @@ with open('data.txt') as f:  # Take in data.txt as an input file
             lineIn = int(line.strip())
             current += lineIn
 
-        # Read next line
+        # --- Read next line ---
         line = f.readline()
 
+    # Print Print Results!
     print("Top Elf: " + str(answer))
     print("Sum of Top 3: " + str(answer + answer2 + answer3))  # Print answer

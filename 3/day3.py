@@ -9,12 +9,10 @@ with open('data.txt') as f:  # Take in data.txt as an input file
     counter = 0
     line = f.readline()
     while line:  # Read each line separately, until no more lines to read.
-        # print(line.strip())  # Check input is working
-
-        # Do math on input
+        # --- Do math on input ---
         lineIn = line.strip()
 
-        # First Strategy
+        # --- First Strategy ---
         firstHalf = lineIn[0:int(len(lineIn)/2)]
         secondHalf = lineIn[int(len(lineIn)/2)::]
         # print(firstHalf + secondHalf + " = " + lineIn)
@@ -31,7 +29,7 @@ with open('data.txt') as f:  # Take in data.txt as an input file
                 value -= 58
             answer += value
 
-        # Second Strategy
+        # --- Second Strategy ---
         counter += 1
         if counter == 1:
             line1 = lineIn
@@ -53,9 +51,9 @@ with open('data.txt') as f:  # Take in data.txt as an input file
                 value -= 58
             answer2 += value
 
-        # Read next line
+        # --- Read next line ---
         line = f.readline()
 
-    # Results!
+    # Print Results!
     print("First Strategy: " + str(answer))
     print("Second Strategy: " + str(answer2))

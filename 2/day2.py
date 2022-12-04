@@ -5,9 +5,7 @@ with open('data.txt') as f:  # Take in data.txt as an input file
 
     line = f.readline()
     while line:  # Read each line separately, until no more lines to read.
-        # print(line.strip())  # Check input is working
-
-        # Do math on input
+        # --- Do math on input ---
         lineIn = line.strip()
 
         values0 = ['A', 'B', 'C']  # Rock, Paper, or Scissor for enemy
@@ -15,7 +13,7 @@ with open('data.txt') as f:  # Take in data.txt as an input file
         values2 = [1, 2, 3]  # You throw Rock, Paper, or Scissor
         temp = 0
 
-        # First Strategy
+        # --- First Strategy ---
         if lineIn[2] == 'X':
             answer += 1  # You throw rock
             temp = values0.index(lineIn[0]) + 2  # Calculate result
@@ -31,7 +29,7 @@ with open('data.txt') as f:  # Take in data.txt as an input file
             temp -= 3
         answer += values1[temp]
 
-        # Second Strategy
+        # --- Second Strategy ---
         if lineIn[2] == 'X':
             answer2 += 0  # You lose
             temp = values0.index(lineIn[0]) + 2  # Calculate what you throw
@@ -47,9 +45,9 @@ with open('data.txt') as f:  # Take in data.txt as an input file
             temp -= 3
         answer2 += values2[temp]
 
-        # Read next line
+        # --- Read next line ---
         line = f.readline()
 
-    # Results!
+    # Print Results!
     print("First Strategy: " + str(answer))
     print("Second Strategy: " + str(answer2))
